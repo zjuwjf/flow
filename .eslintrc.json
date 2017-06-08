@@ -1,0 +1,149 @@
+{
+	"env": {
+		"browser": true,
+		"node": true,
+		"commonjs": true
+	},
+	"ecmaFeatures": {
+		"arrowFunctions": true,
+		"destructuring": true,
+		// class  
+		"classes": true,
+		// http://es6.ruanyifeng.com/#docs/function#����������Ĭ��ֵ  
+		"defaultParams": true,
+		"blockBindings": true,
+		"modules": true,
+		// http://es6.ruanyifeng.com/#docs/object#����������ʽ  
+		"objectLiteralComputedProperties": true,
+		/*var o = { 
+			method() { 
+				return "Hello!"; 
+			} 
+		}; 
+ 
+		var o = { 
+		method: function() { 
+			return "Hello!"; 
+		} 
+		}; 
+		*/
+		"objectLiteralShorthandMethods": true,
+		/* 
+		  var foo = 'bar'; 
+		  var baz = {foo}; 
+		  baz // {foo: "bar"} 
+		  var baz = {foo: foo}; 
+		*/
+		"objectLiteralShorthandProperties": true,
+		// http://es6.ruanyifeng.com/#docs/function#rest����  
+		"restParams": true,
+		// http://es6.ruanyifeng.com/#docs/function#��չ������  
+		"spread": true,
+		// http://es6.ruanyifeng.com/#docs/iterator#for---ofѭ��  
+		"forOf": true,
+		// http://es6.ruanyifeng.com/#docs/generator  
+		"generators": true,
+		// http://es6.ruanyifeng.com/#docs/string#ģ���ַ���  
+		"templateStrings": true,
+		"superInFunctions": true,
+		// http://es6.ruanyifeng.com/#docs/object#��������չ������  
+		"experimentalObjectRestSpread": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"rules": {
+		"quotes": [2, "single", { "allowTemplateLiterals": true }],
+		"semi": 0,
+		"no-unused-vars": 2,
+		"comma-spacing": [
+			2,
+			{
+				"before": false,
+				"after": true
+			}
+		],
+		"eol-last": 2,
+		// "eqeqeq": [
+		// 	2,
+		// 	"allow-null"
+		// ],
+		//禁止在条件表达式中使用赋值语句
+        "no-cond-assign": 2,
+		//函数参数禁止重名
+        "no-dupe-args": 2,
+		//在创建对象字面量时不允许键重复 
+        "no-dupe-keys": 2,
+        //在switch语句中禁止重复的case
+        "no-duplicate-case": 2,
+        //代码块的内容不能为空，禁止空代码块
+        "no-empty": 2,
+		//正则表达式的内容不能为空，禁止使用不匹配任何字符串的正则表达式
+        "no-empty-character-class": 2,
+        //禁止对catch语句中的异常进行赋值
+        "no-ex-assign": 2,
+        //禁止不必要的bool转换
+        "no-extra-boolean-cast": 2,
+        //禁止使用多余的圆括号
+        // "no-extra-parens": 2,
+        //禁止多余的冒号
+        "no-extra-semi": 2,
+        //禁止重复的函数声明
+        "no-func-assign": 2,
+        //禁止在块语句中声明变量或函数
+        "no-inner-declarations": 2,
+		//禁止使用无效的正则语句
+        "no-invalid-regexp": 2,
+        //禁止使用不合法或者不规则的空白符
+        "no-irregular-whitespace": 2,
+        //在in操作符左边的操作项不能用! 例如这样写不对的：if ( !a in b) { //dosomething }
+        "no-negated-in-lhs": 2,
+        //禁止把全局对象当函数调用，比如下面写法错误的：Math(), JSON()
+        "no-obj-calls": 2,
+        //禁止在正则表达式字面量中使用多个空格 /foo bar/
+        "no-regex-spaces": 2,
+        //禁止稀疏数组，清除多余的逗号申明  比如[1,,2]
+        "no-sparse-arrays": 2,
+        //为了保证两行不相关的代码不会意外的被当做一行代码来解析
+        "no-unexpected-multiline": 2,
+		//禁止有执行不到的代码
+        "no-unreachable": 2,
+        //禁止和NaN作比较,推荐使用isNaN方法
+        "use-isnan": 2,
+        //用来检测JSDoc是否完整和合法
+        "valid-jsdoc": 2,
+        //typeof操作符返回的结果会是 "undefined",  "object",  "boolean", "number", "string", 和  "function"之一。
+        //保证typeof 操作符返回的结果必须和上面六个字符串作比较
+        "valid-typeof": 2,
+		//该规则保证了字符串不分行书写。
+        "no-multi-str": 2,
+		 //避免重复声明一个变量
+        "no-redeclare": [2, { "builtinGlobals": true }],
+		//禁止可能导致结果不明确的逗号操作符
+        "no-sequences": 2,
+		//变量声明时必须赋初值
+        // "init-declarations": 2,
+		//防止label和声明的变量重名
+        "no-label-var": 2,
+		//禁止声明外部作用域中已定义的变量
+        // "no-shadow": 2,
+        //声明变量时禁止覆盖JavaScript中的一些保留关键字，比如NaN、Infinity、undefined、eval、arguments等。
+        "no-shadow-restricted-names": 2,
+        //禁止使用未被定义的变量，除非已在配置文件的global中进行了说明。
+        "no-undef": 2,
+		//所有的变量都应该先定义后使用
+        // "no-use-before-define": 2,
+		//统一this的别名（this赋值的变量名）保证整个应用程序代码的统一。
+        //如果一个变量被指定为this对象的别名，那么这个变量就不能够用来赋其他值，只能够用来保存this对象。
+        //如果this对象明确被赋值给了一个变量，那么这个变量应该是配置中指定的那个变量名。     
+        "consistent-this": [2, "self"],
+		// 统一代码缩进方式，默认值是4 spaces.
+        // "indent": 2,
+		 //规定了在JSX中的属性值是使用单引号还是双引号,默认使用双引号
+        "jsx-quotes": [2, "prefer-double"]
+	}
+}
