@@ -12,11 +12,11 @@
 
 #   全新的视角来看前端
 #   1.基于数据绑定的UI  (viewbean) => dom,  React, Vue, Angular
-#   2.
+#   2.从触发源的角度, 构建控制流程.
+#   2.1 主动触发源.
+#        life-circle, widget-event, timer.
+#   2.2 被动触发源
+#        forward
+#   3. 一个触发源, 对应一个控制流程图, 是一个fluent风格的函数, 通过flow构建.
 
-
-
-
-
-
-
+Run the test-flow.js  
