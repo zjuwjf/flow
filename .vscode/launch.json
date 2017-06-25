@@ -7,15 +7,11 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "启动程序",
-            "program": "${file}"
-        },
-        {
-            "type": "node",
-            "request": "attach",
-            "name": "附加到端口",
-            "address": "localhost",
-            "port": 5858
+            "name": "Launch Program",
+            "program": "${file}",
+            "outFiles": [
+                "${workspaceRoot}/out/**/*.js"
+            ]
         }
     ]
 }

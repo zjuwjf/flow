@@ -1,0 +1,157 @@
+{
+    "lintOptions": {
+        "typeCheck": true
+    },
+    "extends": "tslint:all",
+    "rules": {
+        // Don't want these
+        "cyclomatic-complexity": [
+            false
+        ],
+        "newline-before-return": false,
+        "no-parameter-properties": false,
+        "no-unused-variable": false,
+        // TODO: Enable stricter options for these
+        // "align": {
+        //     "options": [
+        //         "parameters",
+        //         "statements",
+        //         "members",
+        //         "elements"
+        //     ]
+        // },
+        "align": [
+            false,
+            "parameters",
+            "statements"
+        ],
+        "space-before-function-paren": [
+            true,
+            {
+                "anonymous": "always",
+                "named": "never",
+                "asyncArrow": "always"
+            }
+        ],
+        "no-empty": false,
+        "forin": false,
+        "prefer-template": [
+            false,
+            "allow-single-concat"
+        ],
+        "one-variable-per-declaration": [
+            true,
+            "ignore-for-loop"
+        ],
+        "no-console": [
+            false,
+            "log",
+            "error"
+        ],
+        "prefer-switch": [
+            false,
+            {
+                "min-cases": 2
+            }
+        ],
+        "object-literal-sort-keys": false,
+        "arrow-return-shorthand": true,
+        "comment-format": [
+            true,
+            "check-space"
+        ],
+        "member-access": true,
+        "only-arrow-functions": [
+            true,
+            "allow-declarations",
+            "allow-named-functions"
+        ],
+        "linebreak-style": [
+            true,
+            "CRLF"
+        ],
+        "quotemark": [
+            true,
+            "single",
+            "avoid-escape"
+            // "avoid-template"
+        ],
+        "semicolon": [
+            true,
+            "never"
+        ],
+        // TODO: Enable these
+        "completed-docs": [
+            false
+        ],
+        "no-any": false,
+        "no-magic-numbers": false,
+        "no-non-null-assertion": false,
+        "no-null-keyword": false,
+        "no-require-imports": false,
+        "no-unbound-method": false,
+        "no-unnecessary-qualifier": false,
+        "no-use-before-declare": false,
+        "no-void-expression": false,
+        "prefer-function-over-method": false,
+        "strict-type-predicates": false,
+        "triple-equals": false,
+        "typedef": [
+            false
+        ],
+        "ban": [
+            true,
+            [
+                "describe",
+                "only"
+            ],
+            [
+                "it",
+                "only"
+            ]
+        ],
+        "interface-name": [
+            false
+        ],
+        "file-header": [
+            false,
+            "Copyright \\d{4} Palantir Technologies, Inc."
+        ],
+        "max-classes-per-file": [
+            false
+        ],
+        "max-line-length": [
+            true,
+            140
+        ],
+        "member-ordering": [
+            true,
+            {
+                "order": [
+                    "static-field",
+                    "instance-field",
+                    "constructor",
+                    "public-instance-method",
+                    "protected-instance-method",
+                    "private-instance-method"
+                ]
+            }
+            // "public-before-private",
+            // "static-before-instance",
+            // "variables-before-functions"
+        ],
+        "no-switch-case-fall-through": true,
+        "strict-boolean-expressions": [
+            true,
+            "allow-boolean-or-undefined"
+        ],
+        "switch-default": false,
+        "variable-name": [
+            true,
+            "ban-keywords",
+            "check-format",
+            "allow-leading-underscore",
+            "allow-pascal-case"
+        ]
+    }
+}
